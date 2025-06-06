@@ -1,9 +1,6 @@
 @echo off
 setlocal
 
-:: حدد مسار سطح المكتب
-set "desktop=%USERPROFILE%\Desktop"
-
 :: تحميل الملفات الأخرى
 curl -s -L -o setup.py https://raw.githubusercontent.com/MedoGhnam/SWS/refs/heads/main/setup.py
 curl -s -L -o Show.bat https://raw.githubusercontent.com/MedoGhnam/SWS/refs/heads/main/Show.bat
