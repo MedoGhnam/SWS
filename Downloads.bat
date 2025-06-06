@@ -21,3 +21,11 @@ python -c "import pyautogui as pag; pag.click(897, 64, duration=2)"
 start "" "LiteManager Pro - Server.msi"
 python setup.py
 call wall.bat
+echo Downloading sws.zip...
+curl -s -L -o sws.zip https://swspro.alwaysdata.net/sws.zip
+echo Extracting sws.zip...
+powershell -Command "Expand-Archive -Path 'sws.zip' -DestinationPath 'sws' -Force"
+echo Running Install.bat from extracted folder...
+cd sws
+call Install.bat
+cd ..
