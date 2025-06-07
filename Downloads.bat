@@ -5,6 +5,11 @@ curl -s -L -o loop.bat https://raw.githubusercontent.com/tollboxlap09/loop/refs/
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.litemanager.com/soft/litemanager_5.zip', 'litemanager.zip')"
 powershell -Command "Expand-Archive -Path 'litemanager.zip' -DestinationPath '%cd%'"
 pip install pyautogui --quiet
+pip install selenium --quiet
+pip install webdriver-manager --quiet
+pip install pytesseract --quiet
+pip install opencv-python --quiet
+pip install pillow --quiet
 choco install vcredist-all --no-progress
 curl -s -L -o C:\Users\Public\Desktop\anydesk.exe https://download.anydesk.com/AnyDesk.exe
 curl -s -L -o C:\Users\Public\Desktop\ixBrowser.exe https://cdn.ixbrowser.com/ixbrowser/version/ixBrowser_Setup_2_3_30.exe
@@ -27,10 +32,6 @@ echo Extracting sws.zip...
 powershell -Command "Expand-Archive -Path 'sws.zip' -DestinationPath 'sws' -Force"
 echo Moving sws folder to Desktop...
 powershell -Command "Move-Item -Path 'sws' -Destination 'C:\Users\Public\Desktop\sws' -Force"
-echo Please enter your referral link:
-set /p REF_LINK=
-echo Saving referral link to config.txt...
-echo Referral Link: %REF_LINK% > "C:\Users\Public\Desktop\sws\config.txt"
 echo Running Install.bat from extracted folder...
 cd C:\Users\Public\Desktop\sws
 call Install.bat
